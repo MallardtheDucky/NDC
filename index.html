@@ -12,7 +12,7 @@
             font-family: 'Inter', sans-serif;
         }
         .hero-bg {
-            background-image: url('https://placehold.co/1200x600/003366/FFFFFF?text=Capitol+Hill');
+            background-image: url('images/United_States_Capitol_west_front_edit2.jpg'); /* Updated Capitol Hill image */
             background-size: cover;
             background-position: center;
         }
@@ -20,10 +20,12 @@
 </head>
 <body class="bg-gray-100">
 
-    <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-blue-800">New Democratic Coalition</a>
+            <a href="#" class="flex items-center space-x-2">
+                <img src="https://placehold.co/40x40/003366/FFFFFF?text=NDC" alt="New Democratic Coalition Logo" class="h-10">
+                <span class="text-xl font-bold text-blue-800 hidden md:block">New Democratic Coalition</span>
+            </a>
             <div class="hidden md:flex space-x-6 items-center">
                 <a href="#about" class="text-gray-600 hover:text-blue-800">About</a>
                 <a href="#leadership" class="text-gray-600 hover:text-blue-800">Leadership</a>
@@ -37,7 +39,6 @@
                 </button>
             </div>
         </nav>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden">
             <a href="#about" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-200">About</a>
             <a href="#leadership" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-200">Leadership</a>
@@ -47,7 +48,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section id="about" class="hero-bg text-white">
         <div class="bg-black bg-opacity-50 h-full">
             <div class="container mx-auto px-6 py-24 text-center">
@@ -58,30 +58,24 @@
         </div>
     </section>
 
-    <!-- Leadership Section -->
     <section id="leadership" class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Leadership</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Leadership Member 1 -->
                 <div class="text-center">
-                    <img src="https://placehold.co/300x300/E2E8F0/4A5568?text=Leader+1" alt="Leader 1" class="rounded-full mx-auto mb-4 w-48 h-48 object-cover shadow-lg">
-                    <h3 class="text-xl font-bold text-gray-800">John D. Rockefeller V</h3>
+                    <img src="images/John_Edwards,_official_Senate_photo_portrait.jpg" alt="Leader 1" class="rounded-full mx-auto mb-4 w-48 h-48 object-cover shadow-lg"> <h3 class="text-xl font-bold text-gray-800">John D. Rockefeller V</h3>
                     <p class="text-gray-600">Coalition Chair</p>
                 </div>
-                <!-- Leadership Member 2 -->
                 <div class="text-center">
                     <img src="https://placehold.co/300x300/E2E8F0/4A5568?text=Leader+2" alt="Leader 2" class="rounded-full mx-auto mb-4 w-48 h-48 object-cover shadow-lg">
                     <h3 class="text-xl font-bold text-gray-800">Jane Smith</h3>
                     <p class="text-gray-600">Vice Chair</p>
                 </div>
-                <!-- Leadership Member 3 -->
                 <div class="text-center">
                     <img src="https://placehold.co/300x300/E2E8F0/4A5568?text=Leader+3" alt="Leader 3" class="rounded-full mx-auto mb-4 w-48 h-48 object-cover shadow-lg">
                     <h3 class="text-xl font-bold text-gray-800">John Doe</h3>
                     <p class="text-gray-600">Policy Director</p>
                 </div>
-                <!-- Leadership Member 4 -->
                 <div class="text-center">
                     <img src="https://placehold.co/300x300/E2E8F0/4A5568?text=Leader+4" alt="Leader 4" class="rounded-full mx-auto mb-4 w-48 h-48 object-cover shadow-lg">
                     <h3 class="text-xl font-bold text-gray-800">Emily White</h3>
@@ -91,12 +85,11 @@
         </div>
     </section>
 
-    <!-- Policies Section -->
     <section id="policies" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Core Principles for a New America</h2>
             <div class="max-w-4xl mx-auto text-lg text-gray-700 space-y-8">
-                 <p class="text-center text-xl">The New Democrats represent a new American center: pragmatic, responsible, and forward-looking. We believe in economic growth with fiscal discipline, social progress with personal responsibility, and national strength with international cooperation.</p>
+                <p class="text-center text-xl">The New Democrats represent a new American center: pragmatic, responsible, and forward-looking. We believe in economic growth with fiscal discipline, social progress with personal responsibility, and national strength with international cooperation.</p>
                 
                 <div class="bg-white p-8 rounded-lg shadow-md">
                     <h3 class="text-2xl font-bold text-blue-800 mb-3">Opportunity for All, Responsibility from All</h3>
@@ -118,7 +111,7 @@
                     <p>We will protect Social Security and Medicare through pragmatic reforms, encourage private savings, and support working families with childcare credits and family leave.</p>
                 </div>
 
-                 <div class="bg-white p-8 rounded-lg shadow-md">
+                <div class="bg-white p-8 rounded-lg shadow-md">
                     <h3 class="text-2xl font-bold text-blue-800 mb-3">America's Role in the World</h3>
                     <p>We believe in securing American interests without unnecessary interventionism. This means strengthening our military capabilities while keeping defense spending efficient and accountable, and ensuring trade agreements work for American workers and businesses.</p>
                 </div>
@@ -126,67 +119,54 @@
         </div>
     </section>
 
-    <!-- Members Section -->
     <section id="members" class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Members</h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
-                <!-- Member 1 -->
                 <div class="text-center">
                     <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
                     <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
                 </div>
-                <!-- Member 2 -->
                 <div class="text-center">
                     <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
                     <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
                 </div>
-                <!-- Member 3 -->
                 <div class="text-center">
                     <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
                     <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
                 </div>
-                <!-- Member 4 -->
                 <div class="text-center">
                     <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
                     <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
                 </div>
-                <!-- Member 5 -->
                 <div class="text-center">
                     <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
                     <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
                 </div>
-                <!-- Member 6 -->
                 <div class="text-center">
                     <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
                     <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
                 </div>
-                 <!-- Member 7 -->
                 <div class="text-center">
                     <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
                     <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
                 </div>
-                <!-- Member 8 -->
                 <div class="text-center">
                     <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
                     <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
                 </div>
-                <!-- Member 9 -->
                 <div class="text-center">
                     <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
                     <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
                 </div>
-                <!-- Member 10 -->
                 <div class="text-center">
                     <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
                     <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
                 </div>
-                <!-- Member 11 -->
                 <div class="text-center">
                     <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
                     <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
                 </div>
-                <!-- Member 12 -->
                 <div class="text-center">
                     <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
                     <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
@@ -195,10 +175,9 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-blue-900 text-white py-10">
         <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2024 New Democratic Coalition. All Rights Reserved.</p>
+            <p>&copy; 2002 New Democratic Coalition. All Rights Reserved.</p>
             <div class="flex justify-center space-x-4 mt-4">
                 <a href="#" class="hover:text-gray-300"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="hover:text-gray-300"><i class="fab fa-twitter"></i></a>
@@ -227,4 +206,3 @@
 
 </body>
 </html>
-
