@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Members - New Democratic Coalition</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             font-family: 'Inter', sans-serif;
+        }
+        .member-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .state-section {
+            border-left: 5px solid #1d4ed8;
+            padding-left: 1.5rem;
         }
     </style>
 </head>
@@ -37,69 +48,209 @@
         <div id="mobile-menu" class="hidden md:hidden">
             <a href="index.html#about" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-200">About</a>
             <a href="index.html#leadership" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-200">Leadership</a>
-                <a href="#" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-200 bg-gray-200">Members</a>
-                <a href="policies.html" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-200">Policies</a>
+            <a href="#" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-200 bg-gray-200">Members</a>
+            <a href="policies.html" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-200">Policies</a>
             <a href="#" class="block py-2 px-4 text-sm bg-blue-700 text-white text-center rounded-md hover:bg-blue-800 transition duration-300 m-2">Donate</a>
         </div>
     </header>
 
-    <section id="members" class="py-20 bg-white">
+    <main class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Members</h2>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
-                <div class="text-center">
-                    <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
-                    <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
-                </div>
-                <div class="text-center">
-                    <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
-                    <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
-                </div>
-                <div class="text-center">
-                    <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
-                    <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
-                </div>
-                <div class="text-center">
-                    <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
-                    <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
-                </div>
-                <div class="text-center">
-                    <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
-                    <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
-                </div>
-                <div class="text-center">
-                    <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
-                    <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
-                </div>
-                <div class="text-center">
-                    <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
-                    <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
-                </div>
-                <div class="text-center">
-                    <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
-                    <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
-                </div>
-                <div class="text-center">
-                    <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
-                    <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
-                </div>
-                <div class="text-center">
-                    <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
-                    <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
-                </div>
-                <div class="text-center">
-                    <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
-                    <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
-                </div>
-                <div class="text-center">
-                    <img src="https://placehold.co/200x200/E2E8F0/4A5568?text=Member" alt="Member" class="rounded-lg mx-auto mb-4 shadow-md">
-                    <h3 class="text-lg font-semibold text-gray-800">Member Name</h3>
-                </div>
-            </div>
-        </div>
-    </section>
+            <h1 class="text-4xl font-bold text-center text-gray-800 mb-12">Meet Our Members</h1>
 
-    <footer class="bg-blue-900 text-white py-10">
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 border-b-2 border-blue-600 pb-2">Leadership</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg member-card text-center">
+                        <img src="https://placehold.co/150x150/e2e8f0/4a5568?text=Leader" alt="Leader" class="rounded-full mx-auto mb-4 w-32 h-32 object-cover border-4 border-blue-600">
+                        <h3 class="text-xl font-bold text-gray-800">Brad Schneider</h3>
+                        <p class="text-gray-600">Chair</p>
+                        <p class="text-sm text-gray-500">IL-10</p>
+                        <div class="mt-4 space-x-4 text-blue-600">
+                            <a href="#" class="hover:text-blue-800"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="hover:text-blue-800"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="hover:text-blue-800"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg member-card text-center">
+                        <img src="https://placehold.co/150x150/e2e8f0/4a5568?text=Leader" alt="Leader" class="rounded-full mx-auto mb-4 w-32 h-32 object-cover border-4 border-blue-600">
+                        <h3 class="text-xl font-bold text-gray-800">Nikki Budzinski</h3>
+                        <p class="text-gray-600">Vice Chair for Policy</p>
+                        <p class="text-sm text-gray-500">IL-13</p>
+                        <div class="mt-4 space-x-4 text-blue-600">
+                            <a href="#" class="hover:text-blue-800"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="hover:text-blue-800"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="hover:text-blue-800"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg member-card text-center">
+                        <img src="https://placehold.co/150x150/e2e8f0/4a5568?text=Leader" alt="Leader" class="rounded-full mx-auto mb-4 w-32 h-32 object-cover border-4 border-blue-600">
+                        <h3 class="text-xl font-bold text-gray-800">Josh Harder</h3>
+                        <p class="text-gray-600">Vice Chair for Member Services</p>
+                        <p class="text-sm text-gray-500">CA-09</p>
+                        <div class="mt-4 space-x-4 text-blue-600">
+                            <a href="#" class="hover:text-blue-800"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="hover:text-blue-800"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="hover:text-blue-800"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 border-b-2 border-blue-600 pb-2">All Members</h2>
+
+                <div class="mb-12 state-section">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-6">Alabama</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md member-card">
+                            <div class="flex items-center space-x-4">
+                                <img src="https://placehold.co/80x80/e2e8f0/4a5568?text=Member" alt="Member" class="rounded-full w-16 h-16 object-cover border-2 border-gray-300">
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800">Terri A. Sewell</h4>
+                                    <p class="text-gray-600">AL-07</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center text-sm">
+                                <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold">Visit Official Site &rarr;</a>
+                                <div class="space-x-2 text-gray-500">
+                                    <a href="#" class="hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="hover:text-blue-600"><i class="fab fa-facebook-f"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md member-card">
+                            <div class="flex items-center space-x-4">
+                                <img src="https://placehold.co/80x80/e2e8f0/4a5568?text=Member" alt="Member" class="rounded-full w-16 h-16 object-cover border-2 border-gray-300">
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800">Shomari Figures</h4>
+                                    <p class="text-gray-600">AL-02</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center text-sm">
+                                <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold">Visit Official Site &rarr;</a>
+                                <div class="space-x-2 text-gray-500">
+                                    <a href="#" class="hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="hover:text-blue-600"><i class="fab fa-facebook-f"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12 state-section">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-6">California</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md member-card">
+                            <div class="flex items-center space-x-4">
+                                <img src="https://placehold.co/80x80/e2e8f0/4a5568?text=Member" alt="Member" class="rounded-full w-16 h-16 object-cover border-2 border-gray-300">
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800">Ami Bera</h4>
+                                    <p class="text-gray-600">CA-06</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center text-sm">
+                                <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold">Visit Official Site &rarr;</a>
+                                <div class="space-x-2 text-gray-500">
+                                    <a href="#" class="hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="hover:text-blue-600"><i class="fab fa-facebook-f"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md member-card">
+                            <div class="flex items-center space-x-4">
+                                <img src="https://placehold.co/80x80/e2e8f0/4a5568?text=Member" alt="Member" class="rounded-full w-16 h-16 object-cover border-2 border-gray-300">
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800">Salud Carbajal</h4>
+                                    <p class="text-gray-600">CA-24</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center text-sm">
+                                <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold">Visit Official Site &rarr;</a>
+                                <div class="space-x-2 text-gray-500">
+                                    <a href="#" class="hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="hover:text-blue-600"><i class="fab fa-facebook-f"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md member-card">
+                            <div class="flex items-center space-x-4">
+                                <img src="https://placehold.co/80x80/e2e8f0/4a5568?text=Member" alt="Member" class="rounded-full w-16 h-16 object-cover border-2 border-gray-300">
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800">Jim Costa</h4>
+                                    <p class="text-gray-600">CA-21</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center text-sm">
+                                <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold">Visit Official Site &rarr;</a>
+                                <div class="space-x-2 text-gray-500">
+                                    <a href="#" class="hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="hover:text-blue-600"><i class="fab fa-facebook-f"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md member-card">
+                            <div class="flex items-center space-x-4">
+                                <img src="https://placehold.co/80x80/e2e8f0/4a5568?text=Member" alt="Member" class="rounded-full w-16 h-16 object-cover border-2 border-gray-300">
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800">Sara Jacobs</h4>
+                                    <p class="text-gray-600">CA-51</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center text-sm">
+                                <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold">Visit Official Site &rarr;</a>
+                                <div class="space-x-2 text-gray-500">
+                                    <a href="#" class="hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="hover:text-blue-600"><i class="fab fa-facebook-f"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+
+                <div class="mb-12 state-section">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-6">Connecticut</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md member-card">
+                            <div class="flex items-center space-x-4">
+                                <img src="https://placehold.co/80x80/e2e8f0/4a5568?text=Member" alt="Member" class="rounded-full w-16 h-16 object-cover border-2 border-gray-300">
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800">Joe Courtney</h4>
+                                    <p class="text-gray-600">CT-02</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center text-sm">
+                                <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold">Visit Official Site &rarr;</a>
+                                <div class="space-x-2 text-gray-500">
+                                    <a href="#" class="hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="hover:text-blue-600"><i class="fab fa-facebook-f"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md member-card">
+                            <div class="flex items-center space-x-4">
+                                <img src="https://placehold.co/80x80/e2e8f0/4a5568?text=Member" alt="Member" class="rounded-full w-16 h-16 object-cover border-2 border-gray-300">
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800">Jahana Hayes</h4>
+                                    <p class="text-gray-600">CT-05</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center text-sm">
+                                <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold">Visit Official Site &rarr;</a>
+                                <div class="space-x-2 text-gray-500">
+                                    <a href="#" class="hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="hover:text-blue-600"><i class="fab fa-facebook-f"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </section>
+        </div>
+    </main>
+
+    <footer class="bg-blue-900 text-white py-10 mt-16">
         <div class="container mx-auto px-6 text-center">
             <p>&copy; 2003 New Democratic Coalition. All Rights Reserved.</p>
             <div class="flex justify-center space-x-4 mt-4">
