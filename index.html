@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Democratic Coalition</title>
+    <title>New Democratic Coalition - A New American Center</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
-        .hero-bg {
-            background-image: url('images/United_States_Capitol_west_front_edit2.jpg');
-            background-size: cover;
-            background-position: center;
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x1080/0f172a/FFFFFF/png?text=A+New+American+Century') no-repeat center center/cover;
+            color: white;
+            padding: 10rem 0;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
     </style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 text-gray-800">
 
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
@@ -48,48 +55,71 @@
         </div>
     </header>
 
-    <section id="about" class="hero-bg text-white">
-        <div class="bg-black bg-opacity-50 h-full">
-            <div class="container mx-auto px-6 py-24 text-center">
-                <h1 class="text-5xl font-bold mb-4">A Bridge to a New American Century</h1>
-                <p class="text-xl mb-8">"We cannot solve tomorrow's problems with yesterday's politics."</p>
-                <a href="#" class="bg-white text-blue-800 font-bold py-3 px-8 rounded-full hover:bg-gray-200 transition duration-300">Join Us</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="leadership" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Leadership</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <img src="images/John_Edwards,_official_Senate_photo_portrait.jpg" alt="Leader 1" class="rounded-full mx-auto mb-4 w-48 h-48 object-cover shadow-lg">
-                    <h3 class="text-xl font-bold text-gray-800">John D. Rockefeller V</h3>
-                    <p class="text-gray-600">Coalition Chair</p>
-                </div>
-                <div class="text-center">
-                    <img src="https://placehold.co/300x300/E2E8F0/4A5568?text=Leader+2" alt="Leader 2" class="rounded-full mx-auto mb-4 w-48 h-48 object-cover shadow-lg">
-                    <h3 class="text-xl font-bold text-gray-800">Jane Smith</h3>
-                    <p class="text-gray-600">Vice Chair</p>
-                </div>
-                <div class="text-center">
-                    <img src="https://placehold.co/300x300/E2E8F0/4A5568?text=Leader+3" alt="Leader 3" class="rounded-full mx-auto mb-4 w-48 h-48 object-cover shadow-lg">
-                    <h3 class="text-xl font-bold text-gray-800">John Doe</h3>
-                    <p class="text-gray-600">Policy Director</p>
-                </div>
-                <div class="text-center">
-                    <img src="https://placehold.co/300x300/E2E8F0/4A5568?text=Leader+4" alt="Leader 4" class="rounded-full mx-auto mb-4 w-48 h-48 object-cover shadow-lg">
-                    <h3 class="text-xl font-bold text-gray-800">Emily White</h3>
-                    <p class="text-gray-600">Communications Director</p>
+    <main>
+        <section class="hero-section text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-4 animate-fade-in-up">Building a New American Century</h1>
+                <p class="text-xl md:text-2xl font-light mb-8 animate-fade-in-up delay-200">Pragmatic, Responsible, and Forward-Looking. We are the bridge to a renewed America.</p>
+                <div class="space-x-4">
+                    <a href="#about" class="bg-blue-700 text-white py-3 px-8 rounded-md text-lg font-semibold hover:bg-blue-800 transition duration-300 transform hover:scale-105">Learn More</a>
+                    <a href="members.html" class="bg-transparent border-2 border-white text-white py-3 px-8 rounded-md text-lg font-semibold hover:bg-white hover:text-blue-700 transition duration-300 transform hover:scale-105">Meet Our Members</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="bg-blue-900 text-white py-10">
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Why America Needs Renewal?</h2>
+                <p class="text-lg text-gray-600 mb-8">America in the early 21st century faces a choice. The old liberalism of unchecked spending and bureaucracy has run its course. The conservative promise of tax cuts for the wealthy and neglect for the common good has also failed.</p>
+                <p class="text-lg text-gray-600">The New Democrats represent a new American center: pragmatic, responsible, and forward-looking. We believe in economic growth with fiscal discipline, social progress with personal responsibility, and national strength with international cooperation.</p>
+                <p class="text-lg text-gray-600 mt-4">We are Democrats because we believe government has a role in empowering people. We are New Democrats because we believe that role must change for a new era.</p>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-12">Our Core Principles</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-lg card text-center">
+                        <i class="fas fa-handshake text-5xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Opportunity for All, Responsibility from All</h3>
+                        <p class="text-gray-600">Expand access to education and training so every American can adapt to a changing economy. Welfare-to-work programs that support those willing to strive, while ending dependency.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg card text-center">
+                        <i class="fas fa-chart-line text-5xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">A Pro-Growth Economy That Works for Everyone</h3>
+                        <p class="text-gray-600">Balance the budget and reform taxes to stimulate growth. Encourage entrepreneurship through small-business tax relief and regulatory reform.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg card text-center">
+                        <i class="fas fa-shield-alt text-5xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">National Strength with International Cooperation</h3>
+                        <p class="text-gray-600">Invest in a strong military while fostering diplomatic relationships to tackle global challenges like climate change and terrorism.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="leadership" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Meet Our Leadership</h2>
+                <p class="text-lg text-gray-600 mb-8">Our coalition is led by some of the most dedicated and forward-thinking members of the House of Representatives.</p>
+                <a href="members.html#leadership" class="bg-blue-700 text-white py-3 px-8 rounded-md text-lg font-semibold hover:bg-blue-800 transition duration-300">View Leadership Team</a>
+            </div>
+        </section>
+
+        <section class="py-20 bg-blue-700 text-white text-center">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Join the Movement for a Better America</h2>
+                <p class="text-lg font-light mb-8">Support our mission to build a brighter future for all Americans.</p>
+                <a href="#" class="bg-white text-blue-700 py-3 px-8 rounded-md text-lg font-semibold hover:bg-gray-200 transition duration-300">Donate Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-900 text-white py-10 mt-16">
         <div class="container mx-auto px-6 text-center">
             <p>&copy; 2003 New Democratic Coalition. All Rights Reserved.</p>
-            <div class="flex justify-center space-x-4 mt-4">
+            <div class="flex justify-center space-x-4 mt-4 text-xl">
                 <a href="#" class="hover:text-gray-300"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="hover:text-gray-300"><i class="fab fa-twitter"></i></a>
                 <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
@@ -114,6 +144,5 @@
             });
         }
     </script>
-
 </body>
 </html>
