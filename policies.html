@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Policies - New Democratic Coalition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="https://placehold.co/40x40/003366/FFFFFF?text=NDC" alt="New Democratic Coalition Logo" class="h-10">
+                <span class="text-xl font-bold text-blue-800 hidden md:block">New Democratic Coalition</span>
+            </a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="index.html#about" class="text-gray-600 hover:text-blue-800">About</a>
+                <a href="index.html#leadership" class="text-gray-600 hover:text-blue-800">Leadership</a>
+                <a href="members.html" class="text-gray-600 hover:text-blue-800">Members</a>
+                <a href="#" class="text-gray-600 hover:text-blue-800 font-bold text-blue-800">Policies</a>
+                <a href="#" class="bg-blue-700 text-white py-2 px-4 rounded-md hover:bg-blue-800 transition duration-300">Donate</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-800 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="index.html#about" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-200">About</a>
+            <a href="index.html#leadership" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-200">Leadership</a>
+            <a href="members.html" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-200">Members</a>
+            <a href="#" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-200 bg-gray-200">Policies</a>
+            <a href="#" class="block py-2 px-4 text-sm bg-blue-700 text-white text-center rounded-md hover:bg-blue-800 transition duration-300 m-2">Donate</a>
+        </div>
+    </header>
+
+    <section id="policies" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Core Principles for a New America</h2>
+            <div class="max-w-4xl mx-auto text-lg text-gray-700 space-y-8">
+                <p class="text-center text-xl">The New Democrats represent a new American center: pragmatic, responsible, and forward-looking. We believe in economic growth with fiscal discipline, social progress with personal responsibility, and national strength with international cooperation.</p>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-3">Opportunity for All, Responsibility from All</h3>
+                    <p>We will expand access to education and training, support welfare-to-work programs, and encourage entrepreneurship through small-business tax relief and regulatory reform.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-3">A Pro-Growth Economy That Works for Everyone</h3>
+                    <p>Our goal is to balance the budget and keep taxes low to fuel private investment. We will simplify the tax code to reward work and savings, and support free and fair trade to open markets for American innovation.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-3">Modernizing Government</h3>
+                    <p>Government must be as efficient as the private sector. We will cut waste and bureaucracy, introduce performance-based budgeting to measure results, and decentralize power to communities and states.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-3">A New Social Compact</h3>
+                    <p>We will protect Social Security and Medicare through pragmatic reforms, encourage private savings, and support working families with childcare credits and family leave.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-3">America's Role in the World</h3>
+                    <p>We believe in securing American interests without unnecessary interventionism. This means strengthening our military capabilities while keeping defense spending efficient and accountable, and ensuring trade agreements work for American workers and businesses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-900 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 New Democratic Coalition. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="hover:text-gray-300"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let i = 0; i < mobileMenuLinks.length; i++) {
+            mobileMenuLinks[i].addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+    </script>
+
+</body>
+</html>
