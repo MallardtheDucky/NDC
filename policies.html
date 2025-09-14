@@ -3,187 +3,530 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Policies - New Democratic Coalition</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>New Democratic Policy Platform 2003 - Enhanced</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Teko:wght@600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #0056b3; /* A deeper, more confident blue */
+            --secondary-color: #212529; /* Dark gray for text */
+            --accent-color: #fca311;   /* A bold, optimistic orange */
+            --background-color: #f8f9fa;
+            --card-background: #ffffff;
+            --border-color: #dee2e6;
+            --header-bg: linear-gradient(45deg, #023e8a, #0077b6);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
+            margin: 0;
+            background-color: var(--background-color);
+            color: var(--secondary-color);
+            line-height: 1.7;
         }
-        .policy-card, .policy-section-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
         }
-        .policy-card:hover, .policy-section-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+
+        .header {
+            background: var(--header-bg);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
         }
-        .text-blue-600 {
-            color: #2563EB;
+
+        .header h1 {
+            font-family: 'Teko', sans-serif;
+            font-size: 4.5em;
+            letter-spacing: 1.5px;
+            margin: 0;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
-        .bg-blue-600 {
-            background-color: #2563EB;
+
+        .header p {
+            font-size: 1.3em;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+
+        .top-nav {
+            background-color: var(--card-background);
+            border-bottom: 1px solid var(--border-color);
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .top-nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin: 0 12px;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+            transition: color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .top-nav a:hover {
+            color: var(--secondary-color);
+            border-bottom-color: var(--accent-color);
+        }
+
+        .policy-section {
+            background-color: var(--card-background);
+            border-radius: 12px;
+            margin: 25px 0;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+            overflow: hidden;
+        }
+
+        summary {
+            font-family: 'Teko', sans-serif;
+            font-size: 2em;
+            letter-spacing: 0.5px;
+            padding: 20px 25px;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            color: var(--primary-color);
+            transition: background-color 0.2s ease;
+        }
+        
+        summary:hover {
+            background-color: #f8f9fa;
+        }
+
+        summary::-webkit-details-marker { display: none; }
+
+        .summary-icon {
+            width: 32px;
+            height: 32px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .summary-arrow {
+            margin-left: auto;
+            font-size: 1.5em;
+            color: var(--accent-color);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        details[open] .summary-arrow {
+            transform: rotate(180deg);
+        }
+
+        .policy-content {
+            padding: 10px 30px 30px 30px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .policy-content h3 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 1.3em;
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 8px;
+            margin-top: 25px;
+            margin-bottom: 20px;
+        }
+
+        .policy-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .policy-content li {
+            padding: 15px;
+            border-left: 4px solid var(--primary-color);
+            margin-bottom: 12px;
+            border-radius: 0 4px 4px 0;
+            background-color: #f8f9fa;
+        }
+
+        .policy-content li strong {
+            color: #023e8a;
+            font-weight: 700;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+            background-color: #212529;
+            color: white;
+        }
+
+        .footer blockquote {
+            font-size: 1.2em;
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto 25px auto;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 25px;
+            text-align: left;
+        }
+
+        .footer p {
+            font-weight: 500;
+            font-size: 1.1em;
+        }
+
+        #backToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: var(--primary-color);
+            color: white;
+            cursor: pointer;
+            padding: 12px 15px;
+            border-radius: 50%;
+            font-size: 18px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        #backToTopBtn:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
         }
     </style>
 </head>
-<body class="bg-gray-100">
+<body>
 
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2">
-                <img src="https://placehold.co/40x40/003366/FFFFFF?text=NDC" alt="New Democratic Coalition Logo" class="h-10">
-                <span class="text-xl font-bold text-blue-800 hidden md:block">New Democrat Coalition</span>
-            </a>
-            <div class="hidden md:flex space-x-6 items-center">
-                <a href="index.html#about" class="text-gray-600 hover:text-blue-800">About</a>
-                <a href="index.html#leadership" class="text-gray-600 hover:text-blue-800">Leadership</a>
-                <a href="members.html" class="text-gray-600 hover:text-blue-800">Members</a>
-                <a href="#" class="text-gray-600 hover:text-blue-800 font-bold text-blue-800">Policies</a>
-                <a href="#" class="bg-blue-700 text-white py-2 px-4 rounded-md hover:bg-blue-800 transition duration-300">Donate</a>
-            </div>
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-800 focus:outline-none">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
-        </nav>
-        <div id="mobile-menu" class="hidden md:hidden">
-            <a href="index.html#about" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-200">About</a>
-            <a href="index.html#leadership" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-200">Leadership</a>
-            <a href="members.html" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-200">Members</a>
-            <a href="#" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-200 bg-gray-200">Policies</a>
-            <a href="#" class="block py-2 px-4 text-sm bg-blue-700 text-white text-center rounded-md hover:bg-blue-800 transition duration-300 m-2">Donate</a>
-        </div>
+    <header class="header">
+        <h1>New Democratic Policy Platform 2003</h1>
+        <p>Practical Solutions for America's Economic Crisis</p>
     </header>
 
-    <main>
-        <section class="bg-blue-800 text-white py-20 text-center">
-            <div class="container mx-auto px-6">
-                <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Our Vision for Renewal</h1>
-                <p class="text-xl md:text-2xl font-light max-w-3xl mx-auto">
-                    The New Democrats represent a new American center: pragmatic, responsible, and forward-looking. We believe in economic growth with fiscal discipline, social progress with personal responsibility, and national strength with international cooperation.
-                </p>
-            </div>
-        </section>
+    <nav class="top-nav">
+        <a href="#fiscal">Fiscal</a> |
+        <a href="#economic">Economic</a> |
+        <a href="#workforce">Workforce</a> |
+        <a href="#healthcare">Healthcare</a> |
+        <a href="#security">Security</a> |
+        <a href="#global">Global</a> |
+        <a href="#energy">Energy</a> |
+        <a href="#reform">Reform</a> |
+        <a href="#regional">Regional</a> |
+        <a href="#defense">Defense</a>
+    </nav>
 
-        <section class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-12">Our Core Principles</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white p-8 rounded-lg shadow-lg policy-card text-center">
-                        <div class="text-blue-600 mb-4">
-                            <i class="fas fa-dollar-sign fa-3x"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-3">A Pro-Growth Economy</h3>
-                        <ul class="list-disc list-inside text-gray-600 text-left space-y-2">
-                            <li>Balance the budget and keep taxes low to fuel private investment.</li>
-                            <li>Simplify the tax code and reward work, savings, and American innovation.</li>
-                            <li>Support free and open markets while ensuring fair competition.</li>
-                        </ul>
-                    </div>
+    <div class="container">
 
-                    <div class="bg-white p-8 rounded-lg shadow-lg policy-card text-center">
-                        <div class="text-blue-600 mb-4">
-                            <i class="fas fa-handshake fa-3x"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Modernizing Government</h3>
-                        <ul class="list-disc list-inside text-gray-600 text-left space-y-2">
-                            <li>Cut waste and bureaucracy; government must be as efficient as the private sector.</li>
-                            <li>Implement performance-based budgeting to measure results, not just spending.</li>
-                            <li>Decentralize power and push decision-making closer to communities and states.</li>
-                        </ul>
-                    </div>
-
-                    <div class="bg-white p-8 rounded-lg shadow-lg policy-card text-center">
-                        <div class="text-blue-600 mb-4">
-                            <i class="fas fa-users-cog fa-3x"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Opportunity & Responsibility</h3>
-                        <ul class="list-disc list-inside text-gray-600 text-left space-y-2">
-                            <li>Expand access to education and training for all Americans.</li>
-                            <li>Promote welfare-to-work programs that end dependency.</li>
-                            <li>Encourage entrepreneurship with small-business tax relief.</li>
-                        </ul>
-                    </div>
+        <div class="policy-section" id="fiscal">
+            <details>
+                <summary>
+                    <svg class="summary-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2zM7 12h2v5H7v-5zm4 0h2v5h-2v-5zm4-5h2v10h-2V7z"></path></svg>
+                    Fiscal Responsibility & Debt Reduction
+                    <span class="summary-arrow">▼</span>
+                </summary>
+                <div class="policy-content">
+                    <h3>Emergency Deficit Response Package</h3>
+                    <ul>
+                        <li><strong>Deficit Reduction Target:</strong> Cut deficit from $705 billion (2003) to $400 billion by 2006 through a combination of spending restraint and economic growth.</li>
+                        <li><strong>Debt Service Stabilization:</strong> Cap debt service payments at current 4.51% of GDP through refinancing shorter-term debt.</li>
+                        <li><strong>Budget Process Reform:</strong> Institute statutory PAYGO rules requiring all new spending or tax cuts to be offset within the same fiscal year.</li>
+                        <li><strong>Automatic Sequestration:</strong> If deficit exceeds 4% of GDP, trigger automatic 2% across-the-board cuts to discretionary spending (excluding Social Security/Medicare).</li>
+                    </ul>
+                    <h3>Tax Code Modernization</h3>
+                    <ul>
+                        <li><strong>Middle Class Tax Relief:</strong> Reduce 25-50k bracket from 20% to 18%, 50-75k bracket from 25% to 23%.</li>
+                        <li><strong>Earned Income Tax Credit Expansion:</strong> Increase EITC by 25% for families with children, phasing out at higher income levels.</li>
+                        <li><strong>Small Business Expensing:</strong> Allow businesses under $10M revenue to immediately expense equipment purchases up to $100,000 annually.</li>
+                        <li><strong>Capital Gains Indexation:</strong> Index capital gains to inflation for assets held over 2 years to encourage long-term investment.</li>
+                    </ul>
                 </div>
-            </div>
-        </section>
-
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-6 text-center">
-                <h3 class="text-4xl font-extrabold text-gray-900 mb-4">"The best welfare program is a paycheck."</h3>
-                <p class="text-blue-600 text-lg font-semibold">- John D. Rockefeller V</p>
-            </div>
-        </section>
-
-        <section id="policy-agenda" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <h3 class="text-3xl font-bold text-blue-800 mb-12 text-center">Specific Policy Agenda</h3>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                    <div class="bg-white p-8 rounded-lg shadow-lg policy-section-card">
-                        <h4 class="text-2xl font-bold text-gray-800 flex items-center mb-6 border-b-2 border-blue-600 pb-4">
-                            <i class="fas fa-graduation-cap text-blue-600 mr-3"></i> Education for a New Century
-                        </h4>
-                        <ul class="list-disc list-inside space-y-4 text-gray-700">
-                            <li><strong>The Schools First Act:</strong> Tie federal aid to measurable results in literacy, numeracy, and graduation rates.</li>
-                            <li><strong>Teacher Excellence Incentives:</strong> Reward educators who deliver measurable student improvements.</li>
-                            <li><strong>Apprenticeship America:</strong> A national initiative offering tax credits to companies that sponsor apprenticeships, aiming for 500,000 new apprenticeships in five years.</li>
-                            <li><strong>Higher Education Affordability:</strong> Expand tax deductions for tuition and simplify loan consolidation to reduce student debt.</li>
-                        </ul>
-                    </div>
-
-                    <div class="bg-white p-8 rounded-lg shadow-lg policy-section-card">
-                        <h4 class="text-2xl font-bold text-gray-800 flex items-center mb-6 border-b-2 border-blue-600 pb-4">
-                            <i class="fas fa-truck-moving text-blue-600 mr-3"></i> Infrastructure & Economy
-                        </h4>
-                        <ul class="list-disc list-inside space-y-4 text-gray-700">
-                            <li><strong>Infrastructure Renewal Plan:</strong> Launch a ten-year, $300 billion program to repair highways and rebuild bridges.</li>
-                            <li><strong>Small Business Payroll Tax Holiday:</strong> Provide a two-year payroll tax holiday for new hires at small firms.</li>
-                            <li><strong>Community Bank Expansion:</strong> Expand federal loan guarantees for community banks that lend to small businesses in underserved areas.</li>
-                        </ul>
-                    </div>
-
-                    <div class="bg-white p-8 rounded-lg shadow-lg policy-section-card col-span-1 lg:col-span-2">
-                        <h4 class="text-2xl font-bold text-gray-800 flex items-center mb-6 border-b-2 border-blue-600 pb-4">
-                            <i class="fas fa-shield-alt text-blue-600 mr-3"></i> Social & Fiscal Reform
-                        </h4>
-                        <ul class="list-disc list-inside space-y-4 text-gray-700">
-                            <li><strong>Social Security and Medicare Protection Act:</strong> Reform these programs to ensure their long-term viability.</li>
-                            <li><strong>Balanced Budget Commitment:</strong> Enshrine a balanced budget amendment to the Constitution to prevent spending from outpacing growth.</li>
-                            <li><strong>Family Opportunity Credit:</strong> Expand earned income tax credits and provide a credit of up to $2,000 per child for working families.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-blue-900 text-white py-10 mt-16">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2003 New Democratic Coalition. All Rights Reserved.</p>
-            <div class="flex justify-center space-x-4 mt-4">
-                <a href="#" class="hover:text-gray-300"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="hover:text-gray-300"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
-            </div>
+            </details>
         </div>
+
+        <div class="policy-section" id="economic">
+            <details>
+                <summary>
+                    <svg class="summary-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z"></path></svg>
+                    Economic Recovery & Growth
+                    <span class="summary-arrow">▼</span>
+                </summary>
+                <div class="policy-content">
+                     <h3>Technology Sector Stabilization</h3>
+                    <ul>
+                        <li><strong>R&D Tax Credit Enhancement:</strong> Increase R&D tax credit from 20% to 30% for companies investing in domestic research facilities.</li>
+                        <li><strong>Tech Worker Retraining:</strong> $2 billion fund for displaced tech workers to retrain in healthcare, education, and infrastructure sectors.</li>
+                        <li><strong>Broadband Infrastructure:</strong> Federal matching funds for states to expand high-speed internet access, creating 200,000 construction jobs.</li>
+                        <li><strong>Patent Reform:</strong> Streamline patent approval process and reduce fees for small inventors and startups.</li>
+                    </ul>
+                    <h3>Manufacturing Renaissance</h3>
+                    <ul>
+                        <li><strong>Made in America Tax Credit:</strong> 5% tax credit for manufacturers who maintain 75% domestic production.</li>
+                        <li><strong>Trade Enforcement Unit:</strong> Create a 500-person trade enforcement division to investigate dumping and currency manipulation.</li>
+                        <li><strong>Manufacturing Extension Partnership:</strong> Triple funding for MEP to help small manufacturers adopt new technologies and improve efficiency.</li>
+                        <li><strong>Infrastructure Jobs Program:</strong> $50 billion over 3 years for highway, bridge, and port improvements prioritizing American-made materials.</li>
+                    </ul>
+                    <h3>Small Business Support</h3>
+                    <ul>
+                        <li><strong>SBA Loan Guarantee Expansion:</strong> Increase SBA loan guarantees from 75% to 85% for loans under $500,000.</li>
+                        <li><strong>Small Business Health Insurance:</strong> Allow small businesses to pool together for health insurance purchasing power.</li>
+                        <li><strong>Regulatory Relief:</strong> Exempt businesses under 50 employees from new federal regulations for the first 2 years of operation.</li>
+                        <li><strong>One-Stop Business Registration:</strong> Federal grants to states creating single online portals for all business licensing.</li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+
+        <div class="policy-section" id="workforce">
+            <details>
+                <summary>
+                    <svg class="summary-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path></svg>
+                    Workforce Development
+                    <span class="summary-arrow">▼</span>
+                </summary>
+                <div class="policy-content">
+                    <h3>Skills for the 21st Century</h3>
+                    <ul>
+                        <li><strong>Community College Partnership:</strong> $5 billion to partner community colleges with local employers for job-specific training programs.</li>
+                        <li><strong>Apprenticeship Tax Credit:</strong> $2,000 per apprentice tax credit for employers, with the goal of 500,000 new apprenticeships by 2006.</li>
+                        <li><strong>Portable Benefits Pilot:</strong> Test programs in 10 states allowing benefits to follow workers between jobs.</li>
+                        <li><strong>Career Services Modernization:</strong> Upgrade unemployment offices to provide job matching, skills assessment, and training referrals.</li>
+                    </ul>
+                    <h3>Education Reform</h3>
+                    <ul>
+                        <li><strong>Teacher Quality Initiative:</strong> $3 billion for performance bonuses and student loan forgiveness for teachers in high-need schools.</li>
+                        <li><strong>School Accountability:</strong> Tie 20% of federal education funding to measurable improvements in graduation rates and test scores.</li>
+                        <li><strong>Vocational Education Revival:</strong> Restore federal support for trade schools and technical training programs.</li>
+                        <li><strong>Higher Education Affordability:</strong> Allow student loan refinancing at federal rates, cap loan payments at 10% of income.</li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+
+        <div class="policy-section" id="healthcare">
+            <details>
+                <summary>
+                    <svg class="summary-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"></path></svg>
+                    Healthcare Cost Control
+                    <span class="summary-arrow">▼</span>
+                </summary>
+                <div class="policy-content">
+                    <h3>Market-Based Healthcare Reform</h3>
+                    <ul>
+                        <li><strong>Health Savings Account Expansion:</strong> Increase HSA contribution limits to $5,000 individual/$10,000 family, allow rollover.</li>
+                        <li><strong>Prescription Drug Competition:</strong> Allow Medicare to negotiate drug prices for high-volume medications.</li>
+                        <li><strong>Medical Liability Reform:</strong> Cap non-economic damages at $250,000, establish medical courts for malpractice cases.</li>
+                        <li><strong>Price Transparency:</strong> Require hospitals and clinics to post standard procedure costs online.</li>
+                    </ul>
+                    <h3>Family Health Security</h3>
+                    <ul>
+                        <li><strong>Children's Health Insurance:</strong> Expand CHIP to families earning up to 250% of poverty level.</li>
+                        <li><strong>Preventive Care Investment:</strong> Tax credits for employers offering comprehensive wellness programs.</li>
+                        <li><strong>Mental Health Parity:</strong> Require insurance coverage for mental health equal to physical health coverage.</li>
+                        <li><strong>Rural Health Access:</strong> Loan forgiveness for doctors and nurses serving in underserved areas for 5+ years.</li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+        
+        <div class="policy-section" id="security">
+            <details>
+                <summary>
+                    <svg class="summary-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
+                    Social Security & Retirement Security
+                    <span class="summary-arrow">▼</span>
+                </summary>
+                <div class="policy-content">
+                    <h3>Long-Term Solvency Reforms</h3>
+                    <ul>
+                        <li><strong>Retirement Age Adjustment:</strong> Gradually increase full retirement age from 65 to 67 over a 20-year period.</li>
+                        <li><strong>Benefit Formula Adjustment:</strong> Reduce benefits for high earners (top 5%) while protecting current and near-retirees.</li>
+                        <li><strong>Private Account Option:</strong> Allow workers under 35 to invest 2% of payroll taxes in regulated index funds.</li>
+                        <li><strong>Disability Reform:</strong> Strengthen work incentives and vocational rehabilitation for disabled beneficiaries.</li>
+                    </ul>
+                    <h3>Pension Protection</h3>
+                    <ul>
+                        <li><strong>401(k) Automatic Enrollment:</strong> Require employers to automatically enroll workers in retirement plans with an opt-out option.</li>
+                        <li><strong>Pension Insurance Strengthening:</strong> Increase PBGC premiums on underfunded plans to protect retiree benefits.</li>
+                        <li><strong>Small Business Retirement:</strong> Simplified retirement plans for businesses under 100 employees with reduced administrative costs.</li>
+                        <li><strong>Financial Literacy:</strong> Mandatory retirement planning education in high schools and community colleges.</li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+
+        <div class="policy-section" id="global">
+            <details>
+                <summary>
+                    <svg class="summary-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1h-2v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path></svg>
+                    Trade & Globalization
+                    <span class="summary-arrow">▼</span>
+                </summary>
+                <div class="policy-content">
+                    <h3>Fair Trade Enforcement</h3>
+                    <ul>
+                        <li><strong>Currency Manipulation Response:</strong> Authority to impose tariffs on countries artificially depressing currency values.</li>
+                        <li><strong>Labor Standards Compliance:</strong> Trade agreements must include enforceable worker safety and wage protections.</li>
+                        <li><strong>Trade Adjustment Assistance:</strong> Extend TAA to service workers, increase benefits to 70% of previous wages.</li>
+                        <li><strong>Buy American Preference:</strong> 10% price preference for American goods in federal procurement contracts.</li>
+                    </ul>
+                    <h3>Immigration Reform</h3>
+                    <ul>
+                        <li><strong>High-Skill Immigration:</strong> Increase H-1B visas for STEM graduates from American universities.</li>
+                        <li><strong>Temporary Worker Program:</strong> Guest worker program for agriculture and construction with labor protections.</li>
+                        <li><strong>Border Security Technology:</strong> Invest in electronic monitoring and processing systems rather than physical barriers.</li>
+                        <li><strong>Earned Legalization:</strong> Path to permanent residence for undocumented immigrants who pay taxes and learn English.</li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+
+        <div class="policy-section" id="energy">
+            <details>
+                <summary>
+                    <svg class="summary-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 18c4.41 0 8-3.59 8-8s-3.59-8-8-8-8 3.59-8 8 3.59 8 8 8zm-1-13h2v4h-2zm0 6h2v2h-2z"></path></svg>
+                    Energy Independence
+                    <span class="summary-arrow">▼</span>
+                </summary>
+                <div class="policy-content">
+                    <h3>Domestic Energy Production</h3>
+                    <ul>
+                        <li><strong>Strategic Petroleum Reserve:</strong> Maintain a 90-day supply while encouraging domestic exploration.</li>
+                        <li><strong>Natural Gas Infrastructure:</strong> Federal support for pipeline construction and LNG terminals.</li>
+                        <li><strong>Nuclear Power Renaissance:</strong> Streamline licensing for new nuclear plants meeting enhanced safety standards.</li>
+                        <li><strong>Clean Coal Technology:</strong> Research funding for carbon capture and clean coal technologies.</li>
+                    </ul>
+                    <h3>Alternative Energy Incentives</h3>
+                    <ul>
+                        <li><strong>Renewable Energy Tax Credits:</strong> Extend and expand tax credits for wind, solar, and geothermal projects.</li>
+                        <li><strong>Energy Efficiency Standards:</strong> Appliance and building efficiency standards projected to save consumers $20 billion annually.</li>
+                        <li><strong>Hybrid Vehicle Credits:</strong> Tax credits for purchasing fuel-efficient vehicles, with higher credits for American-made models.</li>
+                        <li><strong>Grid Modernization:</strong> Public-private partnerships to upgrade electrical transmission infrastructure.</li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+        
+        <div class="policy-section" id="reform">
+            <details>
+                <summary>
+                    <svg class="summary-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+                    Government Reform
+                    <span class="summary-arrow">▼</span>
+                </summary>
+                <div class="policy-content">
+                    <h3>Performance-Based Government</h3>
+                    <ul>
+                        <li><strong>Program Assessment Rating Tool:</strong> Systematic evaluation of all federal programs with public scorecards.</li>
+                        <li><strong>Zero-Based Budgeting:</strong> Require agencies to justify all spending from zero baseline every 3 years.</li>
+                        <li><strong>Federal Workforce Reform:</strong> Link federal employee raises to performance metrics and agency results.</li>
+                        <li><strong>Sunset Clauses:</strong> All new programs automatically expire after 7 years unless reauthorized with proven results.</li>
+                    </ul>
+                    <h3>Democratic Accountability</h3>
+                    <ul>
+                        <li><strong>Campaign Finance Reform:</strong> Voluntary public financing for congressional candidates who meet fundraising thresholds.</li>
+                        <li><strong>Lobbying Disclosure:</strong> Real-time electronic filing of lobbying contacts and expenditures.</li>
+                        <li><strong>Ethics Enforcement:</strong> Independent ethics office with authority to investigate and prosecute violations.</li>
+                        <li><strong>Redistricting Standards:</strong> Federal guidelines requiring compact, contiguous districts following political boundaries.</li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+
+        <div class="policy-section" id="regional">
+            <details>
+                <summary>
+                    <svg class="summary-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L4.5 5L12 8l7.5-3L12 2zm0 13l-7.5-3v4L12 19l7.5-3v-4l-7.5 3zM4.5 10v4l7.5 3v-4l-7.5-3z"></path></svg>
+                    Regional Economic Development
+                    <span class="summary-arrow">▼</span>
+                </summary>
+                <div class="policy-content">
+                    <h3>Addressing Regional Challenges</h3>
+                    <ul>
+                        <li><strong>Cambridge Region:</strong> $2 billion manufacturing revitalization fund focusing on aerospace and defense industries.</li>
+                        <li><strong>Superior Region:</strong> Housing construction tax credits and infrastructure investment to support manufacturing recovery.</li>
+                        <li><strong>Columbia Region:</strong> Expanded Earned Income Tax Credit and job training programs targeting poverty reduction.</li>
+                        <li><strong>Heartland Region:</strong> Rural health clinic expansion and telemedicine infrastructure development.</li>
+                        <li><strong>Yellowstone Region:</strong> Agricultural diversification programs and rural broadband expansion.</li>
+                        <li><strong>Austin Region:</strong> Oil revenue stabilization fund and economic diversification incentives.</li>
+                        <li><strong>Phoenix Region:</strong> Grid reliability investment and homeland security technology development.</li>
+                    </ul>
+                     <h3>Urban-Rural Partnership</h3>
+                     <ul>
+                        <li><strong>Main Street Investment:</strong> Tax credits for businesses investing in downtown revitalization in communities under 50,000.</li>
+                        <li><strong>Agricultural Competitiveness:</strong> Crop insurance reform and support for value-added agricultural processing.</li>
+                        <li><strong>Rural Broadband Initiative:</strong> Federal matching funds for rural internet infrastructure development.</li>
+                        <li><strong>Urban Empowerment Zones:</strong> Tax incentives for businesses locating in distressed urban areas.</li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+
+        <div class="policy-section" id="defense">
+            <details>
+                <summary>
+                    <svg class="summary-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"></path></svg>
+                    National Security & Defense
+                    <span class="summary-arrow">▼</span>
+                </summary>
+                <div class="policy-content">
+                    <h3>Defense Efficiency</h3>
+                    <ul>
+                        <li><strong>Defense Acquisition Reform:</strong> Competitive bidding requirements for all contracts over $100 million.</li>
+                        <li><strong>Base Realignment:</strong> Close 25% of overseas bases while maintaining strategic capabilities.</li>
+                        <li><strong>Military Healthcare Integration:</strong> Combine military and VA healthcare systems for improved efficiency.</li>
+                        <li><strong>Defense Manufacturing:</strong> Maintain domestic production capacity for critical defense technologies.</li>
+                    </ul>
+                    <h3>Homeland Security</h3>
+                    <ul>
+                        <li><strong>Port Security:</strong> Container inspection technology and security upgrades at major ports.</li>
+                        <li><strong>Information Sharing:</strong> Integrated database system for intelligence agencies with privacy protections.</li>
+                        <li><strong>Emergency Preparedness:</strong> Federal standards for state and local emergency response capabilities.</li>
+                        <li><strong>Critical Infrastructure:</strong> Public-private partnerships to protect power grids, water systems, and communications.</li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <blockquote>"These policies reflect the New Democratic commitment to fiscal responsibility, economic opportunity, and practical solutions. We measure success not by the size of government programs, but by their results in creating jobs, strengthening families, and building a more competitive America. The era of big government is over, but the era of smart government has just begun."</blockquote>
+        <p>- John D. Rockefeller V</p>
     </footer>
-
+    
+    <button onclick="topFunction()" id="backToTopBtn" title="Go to top">▲</button>
+    
     <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+        var mybutton = document.getElementById("backToTopBtn");
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        window.onscroll = function() {scrollFunction()};
 
-        // Close mobile menu when a link is clicked
-        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
-        for (let i = 0; i < mobileMenuLinks.length; i++) {
-            mobileMenuLinks[i].addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
+        function scrollFunction() {
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
         }
     </script>
 </body>
